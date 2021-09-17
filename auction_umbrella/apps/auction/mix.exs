@@ -1,6 +1,10 @@
 defmodule Auction.MixProject do
   use Mix.Project
 
+  # These are only some of the options that can be set
+  # here for your app
+  # Other dependencies of your app may also have options
+  # that will need to be set here
   def project do
     [
       app: :auction,
@@ -16,9 +20,24 @@ defmodule Auction.MixProject do
   end
 
   # Run "mix help compile.app" to learn about applications.
+  # You can specify lots of other options here, but they're
+  # unnecessary for your starter app
+
   def application do
     [
+      # Any applications you provide to extra_applications is
+      # guaranteed to start before your app does, so that it will
+      # be ready to accept commands when your app needs it
+      # Elixir's logging app is provided by default
       extra_applications: [:logger],
+      # This is an application callback
+      # Any module you specify in this list (along with a list
+      # of args which is currently empty) will be called when the
+      # main app starts
+      # The callback expects Auction.Application.start/2 to be
+      # defined
+      # When you generated the auction app with the --sup flag,
+      # it created that module and placed it here for you
       mod: {Auction.Application, []}
     ]
   end

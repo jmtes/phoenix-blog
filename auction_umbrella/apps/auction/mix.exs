@@ -43,6 +43,9 @@ defmodule Auction.MixProject do
   end
 
   # Run "mix help deps" to learn about dependencies.
+  # This is where you list all the external apps, packages, and
+  # libraries your app depends on
+  # Each is specified as a tuple with the package name and version
   defp deps do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
@@ -50,4 +53,7 @@ defmodule Auction.MixProject do
       # {:sibling_app_in_umbrella, in_umbrella: true}
     ]
   end
+
+  # There are other options and functions you can put here that
+  # aren't included in a skeleton application!
 end

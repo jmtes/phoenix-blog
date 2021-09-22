@@ -14,7 +14,8 @@ defmodule Auction.Application do
       # Tells Elixir we want Auction.Repo to act as a worker
       # Now if the DB connection is severed for any reason,
       # Elixir can try to reconnect
-      {Auction.Repo, []}
+      {Auction.Repo, []},
+      {Phoenix.PubSub, [name: Auction.PubSub, adapter: Phoenix.PubSub.PG2]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

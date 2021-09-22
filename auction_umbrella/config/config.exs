@@ -17,7 +17,7 @@ config :auction_web, AuctionWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "RMDDpG3nVRGQL8ro/gif+vLy+vihbFAOT1DuHXH6i2zZ31jlE2AsUYv5lBFmC8YC",
   render_errors: [view: AuctionWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: AuctionWeb.PubSub,
+  pubsub_server: Auction.PubSub,
   live_view: [signing_salt: "fawbtY8G"]
 
 # Sample configuration:

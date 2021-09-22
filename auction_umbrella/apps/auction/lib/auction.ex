@@ -6,14 +6,14 @@ defmodule Auction do
   if it comes from the database, an external API or others.
   """
 
-  alias Auction.{FakeRepo, Item}
+  alias Auction.Item
 
   # This is an example of a module attribute
   # Here, @repo is being used as a sort of constant value
   # When the module is compiled, the value of the module attribute is
   # read and inserted into any code that references it
   # Because they're compiled, they can't be set or changed at runtime
-  @repo FakeRepo
+  @repo Auction.Repo
 
   def list_items do
     @repo.all(Item)

@@ -26,4 +26,10 @@ defmodule Auction do
   def get_item_by(attrs) do
     @repo.get_by(Item, attrs)
   end
+
+  def create_item(attrs) do
+    Item
+    |> struct(attrs)
+    |> @repo.insert()
+  end
 end

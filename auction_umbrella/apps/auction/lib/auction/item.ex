@@ -1,5 +1,5 @@
 defmodule Auction.Item do
-  use Ecto.schema()
+  use Ecto.Schema
 
   schema "items" do
     field(:title, :string)

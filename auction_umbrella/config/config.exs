@@ -38,11 +38,12 @@ config :phoenix, :json_library, Jason
 
 # Configure Ecto
 config :auction, ecto_repos: [Auction.Repo]
+
 config :auction, Auction.Repo,
   hostname: "localhost",
   username: "postgres",
   password: "",
-  database: "auction",
+  database: "auction"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

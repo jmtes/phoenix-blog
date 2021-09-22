@@ -7,9 +7,14 @@ defmodule Auction.Application do
 
   @impl true
   def start(_type, _args) do
+    # List all child processes to be supervised
     children = [
       # Starts a worker by calling: Auction.Worker.start_link(arg)
       # {Auction.Worker, arg}
+      # Tells Elixir we want Auction.Repo to act as a worker
+      # Now if the DB connection is severed for any reason,
+      # Elixir can try to reconnect
+      {Auction.Repo, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

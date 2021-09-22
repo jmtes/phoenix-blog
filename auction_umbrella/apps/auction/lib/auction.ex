@@ -32,4 +32,9 @@ defmodule Auction do
     |> struct(attrs)
     |> @repo.insert()
   end
+
+  # We pattern match to ensure item is an Item struct to
+  # ensure we don't delete any non-Items that may get
+  # passed into the function
+  def delete_item(%Item{} = item), do: @repo.delete(item)
 end

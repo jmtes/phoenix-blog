@@ -33,6 +33,12 @@ defmodule Auction do
     |> @repo.insert()
   end
 
+  def update_item(%Item{} = item, attrs) do
+    item
+    |> Item.changeset(attrs)
+    |> @repo.update()
+  end
+
   # We pattern match to ensure item is an Item struct to
   # ensure we don't delete any non-Items that may get
   # passed into the function
